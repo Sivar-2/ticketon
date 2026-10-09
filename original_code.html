@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "on-secondary-fixed-variant": "#3f465c",
+        "on-surface-variant": "#434655",
+        "primary-container": "#2563eb",
+        "on-error-container": "#93000a",
+        "tertiary": "#006058",
+        "on-background": "#0b1c30",
+        "on-error": "#ffffff",
+        "surface-container": "#e5eeff",
+        "primary-fixed": "#dbe1ff",
+        "on-secondary-container": "#5c647a",
+        "on-tertiary": "#ffffff",
+        "primary": "#004ac6",
+        "inverse-primary": "#b4c5ff",
+        "surface-variant": "#d3e4fe",
+        "on-tertiary-container": "#b3fff3",
+        "error-container": "#ffdad6",
+        "tertiary-fixed-dim": "#6bd8cb",
+        "surface-bright": "#f8f9ff",
+        "on-primary": "#ffffff",
+        "on-tertiary-fixed-variant": "#005049",
+        "inverse-surface": "#213145",
+        "on-primary-fixed": "#00174b",
+        "surface": "#f8f9ff",
+        "inverse-on-surface": "#eaf1ff",
+        "on-secondary-fixed": "#131b2e",
+        "on-primary-fixed-variant": "#003ea8",
+        "surface-container-high": "#dce9ff",
+        "on-surface": "#0b1c30",
+        "outline": "#737686",
+        "surface-dim": "#cbdbf5",
+        "secondary-container": "#dae2fd",
+        "primary-fixed-dim": "#b4c5ff",
+        "surface-container-highest": "#d3e4fe",
+        "tertiary-fixed": "#89f5e7",
+        "error": "#ba1a1a",
+        "secondary-fixed-dim": "#bec6e0",
+        "secondary-fixed": "#dae2fd",
+        "on-secondary": "#ffffff",
+        "on-primary-container": "#eeefff",
+        "tertiary-container": "#007b71",
+        "on-tertiary-fixed": "#00201d",
+        "surface-container-low": "#eff4ff",
+        "surface-tint": "#0053db",
+        "outline-variant": "#c3c6d7",
+        "background": "#f8f9ff",
+        "secondary": "#565e74",
+        "surface-container-lowest": "#ffffff"
+      },
+      borderRadius: {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "2xl": "1rem",
+        "3xl": "1.75rem",
+        "full": "9999px"
+      },
+      spacing: {
+        "space-lg": "1rem",
+        "space-md": "0.75rem",
+        "gutter": "1rem",
+        "space-xs": "0.25rem",
+        "space-xl": "1.5rem",
+        "space-sm": "0.5rem",
+        "margin": "1rem"
+      },
+      fontFamily: {
+        "headline-lg": ["Plus Jakarta Sans", "Roboto", "sans-serif"],
+        "headline-md": ["Plus Jakarta Sans", "Roboto", "sans-serif"],
+        "headline-sm": ["Plus Jakarta Sans", "Roboto", "sans-serif"],
+        "body-lg": ["Roboto", "sans-serif"],
+        "body-md": ["Roboto", "sans-serif"],
+        "body-sm": ["Roboto", "sans-serif"],
+        "label-lg": ["Roboto", "sans-serif"],
+        "label-md": ["Roboto", "sans-serif"],
+        "label-sm": ["Roboto", "sans-serif"]
+      }
+    }
+  }
+};</script><style>
+  @layer base {
+    html, body {
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      overscroll-behavior: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+  }
+  ::-webkit-scrollbar { display: none; }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .icon-filled {
+    font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+  }
+  body {
+    min-height: max(884px, 100dvh);
+  }
+</style></head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen select-none"><!-- Android Pixel System Status Bar --><div class="sticky top-0 z-50 bg-surface/90 backdrop-blur-md pt-2 px-6 pb-1 flex items-center justify-between text-on-surface text-[14px] font-medium tracking-tight"><span class="w-12 text-left font-semibold">9:41</span><!-- Center Punch-hole Camera --><div class="w-3.5 h-3.5 rounded-full bg-on-background/80 flex-shrink-0 shadow-inner"></div><!-- Right Android Indicators (Wi-Fi, 5G, Battery) --><div class="w-16 flex items-center justify-end gap-1.5"><span class="material-symbols-outlined text-[17px] leading-none">wifi</span><span class="material-symbols-outlined text-[17px] leading-none">signal_cellular_alt</span><span class="material-symbols-outlined icon-filled text-[19px] leading-none">battery_full</span></div></div><!-- Material 3 Top App Bar (Center-Aligned / Medium Title) --><header class="sticky top-[32px] z-40 bg-surface/90 backdrop-blur-md px-4 py-2 flex items-center justify-between"><div class="flex items-center gap-3"><button aria-label="Navigate up" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container active:bg-surface-variant transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed"><span class="material-symbols-outlined icon-filled text-[19px]">confirmation_number</span></div><div><h1 class="font-headline-sm text-[20px] font-semibold text-on-surface leading-tight tracking-tight">New Ticket</h1><p class="font-label-sm text-[11px] text-primary font-semibold tracking-wider uppercase">Ticket Flow Dispatch</p></div></div></div><div class="flex items-center gap-1"><button aria-label="Information" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" onclick="alert('Ticket Flow Help &amp; SLA Guidelines')" type="button"><span class="material-symbols-outlined text-[22px]">info</span></button><button aria-label="More options" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" onclick="alert('Ticket Options: Drafts, Templates, Routing')" type="button"><span class="material-symbols-outlined text-[22px]">more_vert</span></button></div></header><main class="flex-1 flex flex-col relative w-full px-4 pt-2 pb-36"><div class="flex flex-col w-full gap-3.5"><!-- Header Banner with M3 Pill Badges --><div class="px-1 pt-1 pb-1 flex flex-col gap-1.5"><div class="flex items-center gap-2 flex-wrap"><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed text-label-md font-medium"><span class="material-symbols-outlined icon-filled text-primary text-[15px]">flash_on</span>
+          Incident Desk
+        </span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant text-label-sm font-medium"><span class="w-2 h-2 rounded-full bg-tertiary"></span>
+          System Online • SLA Active
+        </span></div><p class="text-body-md text-on-surface-variant text-[14px]">Report an incident or maintenance breakdown for automated dispatch.</p></div><!-- 1. Department Card (M3 Tonal Elevated 3xl Card) --><div class="bg-surface-container-lowest rounded-3xl p-4 border border-outline-variant/40 shadow-sm transition-all duration-200"><div class="flex items-center justify-between mb-2 px-1"><span class="text-label-md font-semibold text-primary uppercase tracking-wider text-[12px]">1. Department</span><span class="text-label-sm text-tertiary font-semibold hidden flex items-center gap-1" id="dept-badge"><span class="material-symbols-outlined text-[14px] icon-filled">check_circle</span> Selected
+        </span></div><button class="w-full min-h-[58px] p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container text-left flex items-center justify-between transition-colors active:scale-[0.99]" id="dept-trigger" onclick="toggleDropdown('dept')" type="button"><div class="flex items-center gap-3.5 min-w-0"><div class="w-10 h-10 rounded-2xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center flex-shrink-0 shadow-sm"><span class="material-symbols-outlined icon-filled text-[22px]" id="dept-icon">lan</span></div><div class="min-w-0"><p class="font-headline-sm text-[16px] font-semibold text-on-surface truncate" id="dept-label">IT &amp; Infrastructure</p><p class="font-body-sm text-[13px] text-on-surface-variant truncate">Hardware, Networks &amp; Systems</p></div></div><div class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant"><span class="material-symbols-outlined text-[24px] transition-transform duration-200" id="dept-chevron">keyboard_arrow_down</span></div></button><div class="hidden mt-2 pt-2 flex flex-col gap-1.5 border-t border-outline-variant/30" id="dept-options"><div class="p-3 rounded-2xl bg-primary-fixed/40 flex items-center gap-3 cursor-pointer hover:bg-primary-fixed/70 transition-colors" onclick="selectDept('IT &amp; Infrastructure', 'Hardware, Networks &amp; Systems', 'lan')"><span class="material-symbols-outlined icon-filled text-primary text-[22px]">lan</span><div class="flex-1 min-w-0"><p class="font-label-lg font-semibold text-on-surface text-[15px]">IT &amp; Infrastructure</p><p class="font-body-sm text-on-surface-variant text-[13px]">Endpoints, Wifi, Cloud Credentials</p></div><span class="material-symbols-outlined icon-filled text-primary text-[20px]">check</span></div><div class="p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container flex items-center gap-3 cursor-pointer transition-colors" onclick="selectDept('Facilities &amp; Safety', 'HVAC, Power, Physical Security', 'apartment')"><span class="material-symbols-outlined text-on-surface-variant text-[22px]">apartment</span><div class="flex-1 min-w-0"><p class="font-label-lg font-semibold text-on-surface text-[15px]">Facilities &amp; Safety</p><p class="font-body-sm text-on-surface-variant text-[13px]">Physical keys, Plumbing, Lighting</p></div></div><div class="p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container flex items-center gap-3 cursor-pointer transition-colors" onclick="selectDept('Operations &amp; Fleet', 'Logistics, Shipping &amp; Hardware Assets', 'local_shipping')"><span class="material-symbols-outlined text-on-surface-variant text-[22px]">local_shipping</span><div class="flex-1 min-w-0"><p class="font-label-lg font-semibold text-on-surface text-[15px]">Operations &amp; Fleet</p><p class="font-body-sm text-on-surface-variant text-[13px]">Asset tracking, Deliveries, Workstations</p></div></div></div></div><!-- 2. Location Selection Card (M3 3xl Card) --><div class="bg-surface-container-lowest rounded-3xl p-4 border border-outline-variant/40 shadow-sm transition-all duration-200"><div class="flex items-center justify-between mb-2 px-1"><span class="text-label-md font-semibold text-primary uppercase tracking-wider text-[12px]">2. Branch / Company Location</span><div class="flex items-center gap-1 text-tertiary text-label-sm font-semibold"><span class="material-symbols-outlined icon-filled text-[15px]">my_location</span><span>Geo-tagged</span></div></div><button class="w-full min-h-[58px] p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container text-left flex items-center justify-between transition-colors active:scale-[0.99]" id="loc-trigger" onclick="toggleDropdown('loc')" type="button"><div class="flex items-center gap-3.5 min-w-0"><div class="w-10 h-10 rounded-2xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center flex-shrink-0 shadow-sm"><span class="material-symbols-outlined icon-filled text-[22px]" id="loc-icon">location_on</span></div><div class="min-w-0"><p class="font-headline-sm text-[16px] font-semibold text-on-surface truncate" id="loc-label">Austin HQ - Floor 3 (Executive)</p><p class="font-body-sm text-[13px] text-on-surface-variant truncate">Building B • South Wing</p></div></div><div class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant"><span class="material-symbols-outlined text-[24px] transition-transform duration-200" id="loc-chevron">keyboard_arrow_down</span></div></button><div class="hidden mt-2 pt-2 flex flex-col gap-1.5 border-t border-outline-variant/30" id="loc-options"><div class="p-3 rounded-2xl bg-tertiary-fixed/30 flex items-center gap-3 cursor-pointer" onclick="selectLoc('Austin HQ - Floor 3 (Executive)', 'Building B • South Wing')"><span class="material-symbols-outlined icon-filled text-tertiary text-[22px]">pin_drop</span><div class="flex-1 min-w-0"><p class="font-label-lg font-semibold text-on-surface text-[15px]">Austin HQ - Floor 3 (Executive)</p><p class="font-body-sm text-on-surface-variant text-[13px]">Zone 3B, Automated entry</p></div><span class="material-symbols-outlined icon-filled text-tertiary text-[20px]">check</span></div><div class="p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container flex items-center gap-3 cursor-pointer" onclick="selectLoc('Berlin Innovation Hub', 'Level 2 • Engineering Lab')"><span class="material-symbols-outlined text-on-surface-variant text-[22px]">pin_drop</span><div class="flex-1 min-w-0"><p class="font-label-lg font-semibold text-on-surface text-[15px]">Berlin Innovation Hub</p><p class="font-body-sm text-on-surface-variant text-[13px]">Level 2, Hard-hat restricted</p></div></div><div class="p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container flex items-center gap-3 cursor-pointer" onclick="selectLoc('Singapore APAC Campus', 'Tower 1 • Data Core')"><span class="material-symbols-outlined text-on-surface-variant text-[22px]">pin_drop</span><div class="flex-1 min-w-0"><p class="font-label-lg font-semibold text-on-surface text-[15px]">Singapore APAC Campus</p><p class="font-body-sm text-on-surface-variant text-[13px]">Tower 1, Controlled climate</p></div></div></div></div><!-- 3. Employee Reporter Card --><div class="bg-surface-container-lowest rounded-3xl p-4 border border-outline-variant/40 shadow-sm"><div class="flex items-center justify-between mb-2 px-1"><span class="text-label-md font-semibold text-primary uppercase tracking-wider text-[12px]">3. Employee Name</span><div class="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed text-label-sm font-semibold"><span class="material-symbols-outlined icon-filled text-[14px] text-primary">verified_user</span><span>SSO Verified</span></div></div><div class="min-h-[58px] p-2.5 rounded-2xl bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-3 min-w-0"><div class="relative"><img class="w-11 h-11 rounded-full object-cover ring-2 ring-surface" data-alt="Portrait photo of Alex Rivera, a professional support operations technician wearing a navy smart-casual sweater against soft blue office studio backdrop, warm natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxmMg9G2yl8Voh-WNTMqriHU_xoss34IsvdQFr_6_SiPxpTa07f6iz0Tjx-GtVIxt2TuOaMENpfl-phugAbJBYMPcbHK7kTXM3d0JXz_sml3hggK1hNelzo65eFAQTwal61eEE49iuqlLtGv1QMHfjfYR1kpdzlrc3DZQXnQPKzD_im489v1nOGPv4iAKKxQ3wNYjp_XcUlCkPPr733h9iJfDNqO_3zd_yhIC14pQa"/><span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary ring-2 ring-surface"></span></div><div class="min-w-0"><div class="flex items-center gap-1.5"><p class="font-headline-sm text-[15px] font-semibold text-on-surface truncate">Alex Rivera</p><span class="font-label-sm text-[11px] px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">You</span></div><p class="font-body-sm text-[12px] text-on-surface-variant truncate">alex.rivera@ticketflow.internal</p></div></div><button class="px-3.5 py-2 rounded-full bg-surface-container-high hover:bg-surface-variant text-primary font-label-md text-[13px] font-semibold transition-all active:scale-95 flex items-center gap-1" onclick="alert('Switch reporter profile modal')" type="button"><span>Switch</span><span class="material-symbols-outlined text-[16px]">swap_horiz</span></button></div></div><!-- Priority / Severity (M3 Segmented Button / Tonal Filter Chips) --><div class="bg-surface-container-lowest rounded-3xl p-4 border border-outline-variant/40 shadow-sm"><div class="flex items-center justify-between mb-3 px-1"><span class="text-label-md font-semibold text-primary uppercase tracking-wider text-[12px]">Severity / Priority</span><span class="text-label-sm text-on-surface-variant font-medium" id="priority-note">SLA: 4h Response</span></div><div class="grid grid-cols-3 gap-2 p-1 rounded-2xl bg-surface-container-low"><button class="min-h-[50px] py-2 px-2 rounded-xl flex flex-col items-center justify-center gap-0.5 text-on-surface-variant transition-all active:scale-95" id="btn-low" onclick="setPriority('low')" type="button"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-secondary" id="icon-low">check_box_outline_blank</span><span class="font-label-lg font-semibold text-[14px]">Low</span></div><span class="font-label-sm text-[11px] opacity-75">Minor</span></button><button class="min-h-[50px] py-2 px-2 rounded-xl bg-primary text-on-primary shadow-sm flex flex-col items-center justify-center gap-0.5 transition-all active:scale-95" id="btn-normal" onclick="setPriority('normal')" type="button"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined icon-filled text-[16px] text-on-primary" id="icon-normal">check</span><span class="font-label-lg font-semibold text-[14px]">Normal</span></div><span class="font-label-sm text-[11px] opacity-90">Standard</span></button><button class="min-h-[50px] py-2 px-2 rounded-xl flex flex-col items-center justify-center gap-0.5 text-on-surface-variant transition-all active:scale-95" id="btn-urgent" onclick="setPriority('urgent')" type="button"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-error" id="icon-urgent">priority_high</span><span class="font-label-lg font-semibold text-[14px]">Urgent</span></div><span class="font-label-sm text-[11px] opacity-75">P1 Outage</span></button></div></div><!-- Issue Description (M3 Outlined / Filled Container Styling) --><div class="bg-surface-container-lowest rounded-3xl p-4 border border-outline-variant/40 shadow-sm"><div class="flex items-center justify-between mb-2 px-1"><label class="text-label-md font-semibold text-primary uppercase tracking-wider text-[12px]" for="ticket-desc">Issue Description</label><button class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed hover:bg-primary-fixed-dim text-label-sm font-semibold transition-transform active:scale-95" onclick="insertVoicePrompt()" type="button"><span class="material-symbols-outlined icon-filled text-[15px]">mic</span><span>Voice Dictate</span></button></div><div class="relative rounded-2xl bg-surface-container-low p-3.5 focus-within:ring-2 focus-within:ring-primary focus-within:bg-surface-container-lowest transition-all"><textarea class="w-full bg-transparent font-body-md text-[14px] text-on-surface placeholder:text-outline border-0 p-0 focus:ring-0 focus:outline-none resize-none leading-relaxed" id="ticket-desc" maxlength="500" oninput="updateCharCount(this)" placeholder="E.g., The 4th floor conference room printer is jammed and flashing error code E-04 with smoke detector warning..." rows="4"></textarea><div class="flex items-center justify-between mt-3 pt-2 border-t border-outline-variant/20"><div class="flex items-center gap-1 text-tertiary text-label-sm font-medium"><span class="material-symbols-outlined icon-filled text-[16px]">cloud_done</span><span>Draft auto-saved</span></div><span class="text-label-sm text-on-surface-variant font-mono" id="char-count">0 / 500</span></div></div></div><!-- Photo Evidence (M3 Filled Card with Rounded-3xl and Action Chips) --><div class="bg-surface-container-lowest rounded-3xl p-4 border border-outline-variant/40 shadow-sm"><div class="flex items-center justify-between mb-3 px-1"><div class="flex items-center gap-2"><div class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center text-primary"><span class="material-symbols-outlined icon-filled text-[16px]">attachment</span></div><span class="text-label-md font-semibold text-primary uppercase tracking-wider text-[12px]">Photo Evidence (Optional)</span></div><span class="text-label-sm text-on-surface-variant font-medium">Max 10MB</span></div><div class="cursor-pointer group relative overflow-hidden rounded-2xl bg-surface-container-low hover:bg-surface-container p-6 text-center transition-all duration-200 active:scale-[0.99] flex flex-col items-center justify-center border-2 border-dashed border-outline-variant/60" onclick="simulateUpload()"><div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-105 transition-transform mb-2.5 shadow-sm"><span class="material-symbols-outlined icon-filled text-[28px]">add_a_photo</span></div><p class="font-headline-sm text-[16px] font-semibold text-on-surface">Take photo or attach document</p><p class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">Asset bar code or machine fault • PNG, JPG, HEIC</p><div class="mt-4 flex items-center gap-2.5"><span class="px-3 py-1.5 rounded-full bg-surface-container-high font-label-md text-[13px] text-primary flex items-center gap-1.5 font-medium shadow-sm"><span class="material-symbols-outlined icon-filled text-[16px]">photo_camera</span> Direct Camera
+          </span><span class="px-3 py-1.5 rounded-full bg-surface-container-high font-label-md text-[13px] text-on-surface-variant flex items-center gap-1.5 font-medium shadow-sm"><span class="material-symbols-outlined icon-filled text-[16px]">folder_open</span> Files
+          </span></div></div><div class="hidden mt-3 pt-3 flex items-center gap-3 overflow-x-auto pb-1" id="preview-shelf"><div class="relative w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0 shadow-sm bg-surface-container border border-outline-variant/40"><img class="w-full h-full object-cover" data-alt="Close up photography of modern industrial enterprise office printer control panel displaying red error light and diagnostic warning, clean ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaqRjMemfpqzjGYq7JwTGGTmxXmzG_3YAR_4xQdfkuXbEHZTY8yDX8peguG8H71izZcK9zKZFCE16hL75FbBILMqFMrybMhEw_nf69he3WeaTIaWFufM48lTYJFyuH_9KUTS3v5GLUK3FKX9bY_-B6DaH3DQjqpuEhsNLG4x5FKG9X4WWOFnLZCHucZet4YyIXxLmPYsnYxfqIcYPPrLptxWFCYRKYOGJVcIwiAkkE"/><button class="absolute top-1 right-1 w-6 h-6 rounded-full bg-inverse-surface/90 text-surface flex items-center justify-center shadow-md active:scale-90" onclick="removeImage(this)" type="button"><span class="material-symbols-outlined text-[15px]">close</span></button></div><div class="relative w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0 shadow-sm bg-surface-container border border-outline-variant/40"><img class="w-full h-full object-cover" data-alt="Photo of hardware cable interface rack with disconnected blue ethernet connector and label tag in a clean technical server room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtl6lRXevRHym2wDzdubyqgpmaHz7LiHuky90MfE--p5jytpjXepOEvIhsM9d-yLiFheQcmy4DapBTTg-85ZEzK-FmSS4I9EozJMlH6DcCaj9mnLq2ks_WqjgUChjWzH841UOJlPWJ0azxxs0pYE-P25n3kIsDK8V4JoNrJdC4hfkY91WW2FGvobtCfVvp0s2R_liJq8R8FuGKcNA88TQaiHG3IW3qNfljLjIRL0EO"/><button class="absolute top-1 right-1 w-6 h-6 rounded-full bg-inverse-surface/90 text-surface flex items-center justify-center shadow-md active:scale-90" onclick="removeImage(this)" type="button"><span class="material-symbols-outlined text-[15px]">close</span></button></div><div class="w-20 h-20 rounded-2xl bg-surface-container-low border border-dashed border-outline-variant flex flex-col items-center justify-center text-primary cursor-pointer flex-shrink-0 hover:bg-surface-container transition-colors" onclick="simulateUpload()"><span class="material-symbols-outlined text-[24px]">add</span><span class="font-label-sm text-[11px] font-semibold mt-0.5">Add more</span></div></div></div></div></main><!-- Bottom Bar with Material 3 Extended Full-Width FAB and Android Gesture Pill Navigation --><div class="fixed bottom-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-xl px-4 pt-3 pb-2 border-t border-outline-variant/30 shadow-[0_-8px_24px_rgba(11,28,48,0.06)]"><div class="max-w-md mx-auto flex flex-col gap-2"><div class="flex items-center justify-between px-2"><div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-[12px]"><span class="material-symbols-outlined icon-filled text-[16px] text-tertiary">bolt</span><span>Tier 2 Smart Routing</span></div><span class="font-label-sm text-[12px] text-primary font-bold">Auto ID #TKT-READY</span></div><!-- M3 Extended FAB Button (Rounded-full pill with primary container elevation) --><button class="w-full min-h-[56px] rounded-full bg-primary text-on-primary font-headline-sm text-[17px] font-semibold flex items-center justify-center gap-2.5 shadow-lg shadow-primary/25 hover:bg-primary-container active:scale-[0.98] transition-all" id="submit-ticket-btn" onclick="submitTicket()" type="button"><span class="material-symbols-outlined icon-filled text-[20px]">send</span><span>Submit Ticket Now</span></button><!-- Android Navigation Gesture Bar (Pill Bar) --><div class="w-full pt-2 pb-1 flex items-center justify-center"><div class="w-32 h-1 rounded-full bg-on-surface/40 hover:bg-on-surface transition-colors"></div></div></div></div><script>
+  function toggleDropdown(id) {
+    const opts = document.getElementById(id + '-options');
+    const chev = document.getElementById(id + '-chevron');
+    if (!opts) return;
+    const isHidden = opts.classList.contains('hidden');
+    opts.classList.toggle('hidden');
+    if (chev) {
+      chev.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+    }
+  }
+
+  function selectDept(name, sub, icon) {
+    document.getElementById('dept-label').textContent = name;
+    const badge = document.getElementById('dept-badge');
+    if (badge) badge.classList.remove('hidden');
+    const iconEl = document.getElementById('dept-icon');
+    if (iconEl) iconEl.textContent = icon;
+    toggleDropdown('dept');
+  }
+
+  function selectLoc(name, sub) {
+    document.getElementById('loc-label').textContent = name;
+    toggleDropdown('loc');
+  }
+
+  function setPriority(level) {
+    const btnLow = document.getElementById('btn-low');
+    const btnNorm = document.getElementById('btn-normal');
+    const btnUrg = document.getElementById('btn-urgent');
+    const iconLow = document.getElementById('icon-low');
+    const iconNorm = document.getElementById('icon-normal');
+    const iconUrg = document.getElementById('icon-urgent');
+    const note = document.getElementById('priority-note');
+
+    // Reset base states
+    [btnLow, btnNorm, btnUrg].forEach(b => {
+      b.className = 'min-h-[50px] py-2 px-2 rounded-xl flex flex-col items-center justify-center gap-0.5 text-on-surface-variant transition-all active:scale-95';
+    });
+    iconLow.className = 'material-symbols-outlined text-[16px] text-secondary';
+    iconLow.textContent = 'check_box_outline_blank';
+    iconNorm.className = 'material-symbols-outlined text-[16px] text-secondary';
+    iconNorm.textContent = 'check_box_outline_blank';
+    iconUrg.className = 'material-symbols-outlined text-[16px] text-error';
+    iconUrg.textContent = 'priority_high';
+
+    if (level === 'low') {
+      btnLow.className = 'min-h-[50px] py-2 px-2 rounded-xl bg-secondary text-on-secondary shadow-sm flex flex-col items-center justify-center gap-0.5 transition-all active:scale-95';
+      iconLow.className = 'material-symbols-outlined icon-filled text-[16px] text-on-secondary';
+      iconLow.textContent = 'check';
+      note.textContent = 'SLA: 24h Non-Critical';
+      note.className = 'text-label-sm text-secondary font-medium';
+    } else if (level === 'normal') {
+      btnNorm.className = 'min-h-[50px] py-2 px-2 rounded-xl bg-primary text-on-primary shadow-sm flex flex-col items-center justify-center gap-0.5 transition-all active:scale-95';
+      iconNorm.className = 'material-symbols-outlined icon-filled text-[16px] text-on-primary';
+      iconNorm.textContent = 'check';
+      note.textContent = 'SLA: 4h Response';
+      note.className = 'text-label-sm text-on-surface-variant font-medium';
+    } else if (level === 'urgent') {
+      btnUrg.className = 'min-h-[50px] py-2 px-2 rounded-xl bg-error text-on-error shadow-sm flex flex-col items-center justify-center gap-0.5 transition-all active:scale-95 animate-pulse';
+      iconUrg.className = 'material-symbols-outlined icon-filled text-[16px] text-on-error';
+      iconUrg.textContent = 'warning';
+      note.textContent = 'SLA: 15m Critical Paging';
+      note.className = 'text-label-sm text-error font-bold';
+    }
+  }
+
+  function updateCharCount(el) {
+    document.getElementById('char-count').textContent = el.value.length + ' / 500';
+  }
+
+  function insertVoicePrompt() {
+    const ta = document.getElementById('ticket-desc');
+    ta.value = "Printer display on 4th floor executive corridor showing paper jam error code E-04. Rollers sound active but pages won't feed. Multiple jobs backed up in team queue.";
+    updateCharCount(ta);
+  }
+
+  function simulateUpload() {
+    const shelf = document.getElementById('preview-shelf');
+    if (shelf) shelf.classList.remove('hidden');
+  }
+
+  function removeImage(btn) {
+    const container = btn.parentElement;
+    if (container) container.remove();
+  }
+
+  function submitTicket() {
+    const btn = document.getElementById('submit-ticket-btn');
+    btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-[20px]">progress_activity</span><span>Dispatching Ticket...</span>`;
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined icon-filled text-[20px]">check_circle</span><span>Ticket #TK-8429 Created!</span>`;
+      btn.classList.remove('bg-primary');
+      btn.classList.add('bg-tertiary-container', 'text-on-tertiary-container');
+    }, 1100);
+  }
+</script></body></html>

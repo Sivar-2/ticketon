@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soporte IT — Acceso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+:root {
+  --c-bg:#F8FAFC;--c-surface:#FFFFFF;--c-surface-2:#F1F5F9;
+  --c-border:#E2E8F0;--c-border-2:#CBD5E1;
+  --c-text-1:#0F172A;--c-text-2:#475569;--c-text-3:#94A3B8;
+  --c-accent:#2563EB;--c-accent-dim:#EFF6FF;
+  --c-red:#DC2626;--c-red-dim:#FEF2F2;
+  --radius:12px;--radius-lg:16px;
+  --dur:160ms;--ease:cubic-bezier(.4,0,.2,1);
+  --shadow-sm:0 1px 3px rgba(15,23,42,.05),0 1px 2px rgba(15,23,42,.04);
+  --shadow-lg:0 8px 24px rgba(15,23,42,.08),0 2px 8px rgba(15,23,42,.04);
+}
+[data-theme="dark"] {
+  --c-bg:#0A0F1E;--c-surface:#111827;--c-surface-2:#1E293B;
+  --c-border:#1E293B;--c-border-2:#334155;
+  --c-text-1:#F1F5F9;--c-text-2:#94A3B8;--c-text-3:#475569;
+  --c-accent:#3B82F6;--c-accent-dim:#1E3A5F;
+  --c-red:#F87171;--c-red-dim:#2D0B0B;
+  --shadow-sm:0 1px 3px rgba(0,0,0,.4);--shadow-lg:0 8px 24px rgba(0,0,0,.5);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;}
+body {
+  font-family:'Inter',-apple-system,sans-serif;
+  background:var(--c-bg);color:var(--c-text-1);
+  display:flex;flex-direction:column;min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+  transition:background var(--dur) var(--ease),color var(--dur) var(--ease);
+}
+
+/* NAV */
+.nav {
+  height:52px;padding:0 20px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--c-border);
+  background:var(--c-surface);
+}
+.nav-mark{display:flex;align-items:center;gap:10px;}
+.nav-dot{width:8px;height:8px;background:var(--c-accent);border-radius:50%;}
+.nav-name{font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:700;letter-spacing:-.02em;}
+.icon-btn {
+  width:36px;height:36px;display:flex;align-items:center;justify-content:center;
+  border-radius:10px;border:1px solid var(--c-border);background:transparent;
+  color:var(--c-text-2);cursor:pointer;transition:all var(--dur) var(--ease);
+}
+.icon-btn:hover{background:var(--c-surface-2);}
+.icon-btn svg{width:16px;height:16px;}
+
+/* MAIN */
+.main {
+  flex:1;display:flex;align-items:center;justify-content:center;
+  padding:20px;
+}
+.card {
+  width:100%;max-width:380px;
+  background:var(--c-surface);
+  border:1px solid var(--c-border);
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-lg);
+  padding:32px 28px;
+  transition:background var(--dur) var(--ease);
+}
+
+.card-mark{
+  display:flex;align-items:center;gap:8px;margin-bottom:24px;
+}
+.card-mark-dot{
+  width:10px;height:10px;background:var(--c-accent);border-radius:50%;
+}
+.card-mark-txt{font-size:13px;font-weight:500;color:var(--c-text-2);}
+
+.card h1{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:22px;font-weight:800;letter-spacing:-.03em;
+  color:var(--c-text-1);margin-bottom:6px;
+}
+.card-sub{font-size:14px;color:var(--c-text-2);margin-bottom:28px;line-height:1.5;}
+
+/* FIELDS */
+.field{margin-bottom:14px;}
+.field-lbl{
+  display:block;font-size:12px;font-weight:500;
+  color:var(--c-text-2);margin-bottom:6px;letter-spacing:.01em;
+}
+.field-wrap{
+  display:flex;align-items:center;gap:10px;
+  background:var(--c-surface-2);border:1.5px solid var(--c-border);
+  border-radius:var(--radius);padding:0 14px;height:48px;
+  transition:all var(--dur) var(--ease);
+}
+.field-wrap:focus-within{
+  border-color:var(--c-accent);
+  background:var(--c-surface);
+  box-shadow:0 0 0 3px var(--c-accent-dim);
+}
+.field-wrap svg{width:15px;height:15px;color:var(--c-text-3);flex-shrink:0;}
+.field-wrap input{
+  flex:1;background:transparent;border:none;outline:none;
+  font-family:'Inter',sans-serif;font-size:15px;color:var(--c-text-1);
+}
+.field-wrap input::placeholder{color:var(--c-text-3);}
+.eye-btn{
+  background:none;border:none;cursor:pointer;
+  color:var(--c-text-3);padding:0;display:flex;align-items:center;
+  transition:color var(--dur) var(--ease);
+}
+.eye-btn:hover{color:var(--c-text-2);}
+.eye-btn svg{width:15px;height:15px;}
+
+/* ERROR */
+.error-box{
+  display:flex;align-items:center;gap:8px;
+  background:var(--c-red-dim);border:1px solid var(--c-red);
+  border-radius:var(--radius);padding:10px 14px;
+  font-size:13px;color:var(--c-red);margin-bottom:16px;
+}
+.error-box.hidden{display:none;}
+.error-box svg{width:15px;height:15px;flex-shrink:0;}
+
+/* SUBMIT */
+.submit-btn{
+  width:100%;height:50px;margin-top:8px;
+  background:var(--c-accent);color:#fff;
+  border:none;border-radius:var(--radius);
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:15px;font-weight:700;letter-spacing:-.01em;
+  cursor:pointer;transition:all var(--dur) var(--ease);
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.submit-btn:hover{background:#1D4ED8;box-shadow:0 4px 16px rgba(37,99,235,.35);}
+.submit-btn:active{transform:scale(.98);}
+.submit-btn:disabled{opacity:.6;cursor:not-allowed;transform:none;box-shadow:none;}
+.submit-btn svg{width:16px;height:16px;}
+
+/* HINT */
+.hint{
+  margin-top:20px;padding:12px 14px;
+  background:var(--c-surface-2);border-radius:var(--radius);
+  font-size:12px;color:var(--c-text-2);line-height:1.6;
+}
+.hint strong{color:var(--c-accent);font-weight:600;}
+
+/* BACK */
+.back{
+  display:block;text-align:center;margin-top:20px;
+  font-size:13px;color:var(--c-text-3);text-decoration:none;
+}
+.back:hover{color:var(--c-text-2);}
+
+/* SPINNER */
+@keyframes spin{to{transform:rotate(360deg);}}
+.spin{display:inline-block;animation:spin .7s linear infinite;}
+  </style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-mark">
+    <div class="nav-dot"></div>
+    <span class="nav-name">Soporte IT</span>
+  </div>
+  <button class="icon-btn" id="theme-btn" title="Cambiar tema">
+    <svg id="icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg id="icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </button>
+</nav>
+
+<main class="main">
+  <div class="card">
+    <div class="card-mark">
+      <div class="card-mark-dot"></div>
+      <span class="card-mark-txt">Acceso restringido</span>
+    </div>
+    <h1>Panel de<br/>administración</h1>
+    <p class="card-sub">Solo personal autorizado puede ingresar a esta sección.</p>
+
+    <div class="error-box hidden" id="err-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+      <span id="err-txt">Credenciales incorrectas.</span>
+    </div>
+
+    <form onsubmit="doLogin(event)" novalidate>
+      <div class="field">
+        <label class="field-lbl" for="inp-user">Usuario</label>
+        <div class="field-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          <input id="inp-user" type="text" placeholder="admin" autocomplete="username" required />
+        </div>
+      </div>
+      <div class="field">
+        <label class="field-lbl" for="inp-pass">Contraseña</label>
+        <div class="field-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <input id="inp-pass" type="password" placeholder="••••••••" autocomplete="current-password" required />
+          <button type="button" class="eye-btn" onclick="togglePw()" id="eye-btn">
+            <svg id="eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+            <svg id="eye-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </div>
+      </div>
+      <button type="submit" class="submit-btn" id="login-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+        Entrar
+      </button>
+    </form>
+
+    <div class="hint">
+      Credenciales por defecto — usuario: <strong>admin</strong> · contraseña: <strong>Stitch2024!</strong><br/>
+      Puedes cambiarlas en el panel → Ajustes.
+    </div>
+
+    <a href="index.html" class="back">← Volver al formulario de tickets</a>
+  </div>
+</main>
+
+<script>
+// THEME
+const root = document.documentElement;
+const themeBtn = document.getElementById('theme-btn');
+const iconDark = document.getElementById('icon-dark');
+const iconLight = document.getElementById('icon-light');
+function applyTheme(t) {
+  root.setAttribute('data-theme', t); localStorage.setItem('stitch-theme', t);
+  iconDark.style.display  = t === 'light' ? '' : 'none';
+  iconLight.style.display = t === 'dark'  ? '' : 'none';
+}
+applyTheme(localStorage.getItem('stitch-theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light'));
+themeBtn.addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
+
+// Redirect if already logged in
+if (sessionStorage.getItem('stitch-admin-auth') === 'true') window.location.href = 'admin.html';
+
+// PASSWORD TOGGLE
+let pwVisible = false;
+function togglePw() {
+  pwVisible = !pwVisible;
+  document.getElementById('inp-pass').type = pwVisible ? 'text' : 'password';
+  document.getElementById('eye-off').style.display = pwVisible ? 'none' : '';
+  document.getElementById('eye-on').style.display  = pwVisible ? '' : 'none';
+}
+
+// LOGIN
+function doLogin(e) {
+  e.preventDefault();
+  const user = document.getElementById('inp-user').value.trim();
+  const pass = document.getElementById('inp-pass').value;
+  const errBox = document.getElementById('err-box');
+  const btn = document.getElementById('login-btn');
+  errBox.classList.add('hidden');
+  btn.innerHTML = '<span class="spin">⟳</span> Verificando…'; btn.disabled = true;
+  setTimeout(() => {
+    const creds = JSON.parse(localStorage.getItem('stitch-credentials') || '{}');
+    const vUser = creds.username || 'admin';
+    const vPass = creds.password || 'Stitch2024!';
+    const extra = JSON.parse(localStorage.getItem('stitch-extra-users') || '[]');
+    const isAdmin = user === vUser && pass === vPass;
+    const extraMatch = extra.find(u => u.username === user && u.password === pass && u.active);
+    if (isAdmin || extraMatch) {
+      sessionStorage.setItem('stitch-admin-auth', 'true');
+      sessionStorage.setItem('stitch-admin-role', isAdmin ? 'admin' : 'user');
+      sessionStorage.setItem('stitch-admin-name', isAdmin ? (creds.displayName || 'Administrador') : (extraMatch?.displayName || user));
+      window.location.href = 'admin.html';
+    } else {
+      errBox.classList.remove('hidden');
+      document.getElementById('err-txt').textContent = 'Usuario o contraseña incorrectos.';
+      document.getElementById('inp-pass').value = '';
+      btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>Entrar';
+      btn.disabled = false;
+    }
+  }, 700);
+}
+</script>
+</body>
+</html>
